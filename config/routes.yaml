@@ -1,3 +1,31 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+mediapolis_index:
+    path: /
+    controller: App\Controller\PageController::index
+mediapolis_agence:
+    path: /agence
+    controller: App\Controller\PageController::agence
+mediapolis_equipe:
+    path: /equipe
+    controller: App\Controller\PageController::equipe
+mediapolis_offres_strategique:
+    path: /offres-strategique
+    controller: App\Controller\PageController::offreStrategique
+mediapolis_offre_technologiques:
+    path: /offre-technologiques
+    controller: App\Controller\PageController::offresTechnologiques
+mediapolis_offres_operationnelles:
+    path: /offres-operationnelles
+    controller: App\Controller\PageController::offresOperationnelles
+mediapolis_offres_music_event:
+    path: /offres-music-event
+    controller: App\Controller\PageController::offresMusicEvent
+mediapolis_galerie:
+    path: /galerie
+    controller: App\Controller\PageController::galerie
+mediapolis_blog:
+    path: /blog
+    controller: App\Controller\PageController::blog
+mediapolis_contact:
+    path: /contact
+    controller: App\Controller\PageController::contact
+
