@@ -11,11 +11,16 @@ class PageController extends AbstractController
     
     public function index(): Response
     {
-        $file = "data/partners.json";
+        /*$file = "data/partners.json";
         $data = file_get_contents($file);
-        $partners = \json_decode($data);
-
-        //\var_dump($partners);die();
+        $partners = \json_decode($data);*/
+        $partners = [];
+        for ($i=1; $i < 35; $i++) { 
+            $p = new \stdClass();
+            $p->name="$i";
+            $p->url="$i.png";
+            $partners[] = $p;
+        }
 
         return $this->render('page/index.html.twig', [
             'controller_name' => 'PageController',

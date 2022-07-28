@@ -292,8 +292,8 @@
         {% for p in partners %}
 			<div class="col-lg-3 col-md-4">
 				<div class="portflio-item position-relative mb-4">
-					<a href="{{ asset(p.url) }}" class="popup-gallery">
-						<img src="{{ asset(p.url) }}" alt="" class="img-fluid w-100">
+					<a href="{{ asset('assets/images/partenaires/' ~ p.url) }}" class="popup-gallery">
+						<img src="{{ asset('assets/images/partenaires/' ~ p.url) }}" alt="" class="img-fluid w-100">
 
 						<i class="ti-plus overlay-item"></i>
 						<div class="portfolio-item-content">
