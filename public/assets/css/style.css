@@ -532,6 +532,12 @@ ul.dropdown-menu li {
   background-size: cover;
 }
 
+.bg-18 {
+  background: url("../images/bg/home-18.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
+}
+
 .slider {
   background: url("../images/bg/home-1.jpg") fixed no-repeat;
   background-size: cover;
