@@ -88,4 +88,11 @@ class PageController extends AbstractController
             'controller_name' => 'PageController',
         ]);
     }
+
+    public function recrutements(): Response
+    {
+        return $this->render('page/recrutements.html.twig', [
+            'controller_name' => 'PageController',
+        ]);
+    }
 }

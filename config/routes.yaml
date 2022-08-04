@@ -28,4 +28,6 @@ mediapolis_blog:
 mediapolis_contact:
     path: /contact
     controller: App\Controller\PageController::contact
-
+mediapolis_recrutements:
+    path: /contact
+    controller: App\Controller\PageController::recrutements
