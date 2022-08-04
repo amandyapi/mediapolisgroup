@@ -504,6 +504,30 @@ ul.dropdown-menu li {
 }
 
 .bg-2 {
+  background: url("../images/bg/home-2.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 500px !important;
+}
+
+
+.bg-3 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+.bg-4 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+
+.bg-5 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+
+.bg-6 {
   background: url("../images/bg/home-5.jpg");
   background-size: cover;
 }
@@ -1493,4 +1517,4 @@ h3.quote::before {
   }
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+/* sourceMappingURL=maps/style.css.map */
