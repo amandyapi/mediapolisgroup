@@ -1,0 +1,53 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Article Info
+{% endblock %}
+
+{% block content %}
+	<div class="page-header min-height-500 border-radius-xl mt-4" style="background-image: url({{bgUrl}});">
+		<span class=""></span>
+	</div>
+	<div class="card card-body mx-3 mx-md-4 mt-n3">
+		<div class="row gx-4 mb-2">
+			<div class="col-auto my-auto">
+				<form class="contact-panel__form" method="POST" action="#">
+					<div class="">
+						<h5 class="mb-1">
+							{{article.title}}
+						</h5>
+
+						<p class="mb-0 font-weight-normal">
+							<input type="submit" name="save" value="Modifier" style="" class="btn btn-sm bg-success text-light">
+						</p>
+
+						<p class="mb-0 font-weight-bold text-sm">
+							{{article.user|capitalize}}
+							-
+							{{article.createTime|date("d-m-Y")}}
+						</p>
+
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label for="title">Titre</label>
+									<input type="text" class="form-control border" value="{{article.title}}" id="title" name="title" required>
+								</div>
+							</div>
+							<br><br>
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								<label for="title">Contenu</label>
+								<textarea class=" w-100 " name="content" id="basic-example">
+									{{article.content|raw}}
+								</textarea>
+							</div>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

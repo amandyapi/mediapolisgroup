@@ -1,0 +1,34 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Mail Info
+{% endblock %}
+
+{% block content %}
+	<div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url({{bgUrl}});">
+        <span class="mask  bg-gradient-faded-info-vertical  opacity-6"></span>
+      </div>
+      <div class="card card-body mx-3 mx-md-4 mt-n6">
+        <div class="row gx-4 mb-2">
+          <div class="col-auto my-auto">
+            <div class="h-100">
+              <h5 class="mb-1">
+                {{mail.title}}
+              </h5>
+              <p class="mb-0 font-weight-normal text-muted text-sm">
+                <b>De:</b> {{mail.senderFullName}} - {{mail.senderMail}}
+              </p>
+              <p class="mb-0 font-weight-normal text-sm">
+                {{mail.createTime|date("d-m-Y")}}
+              </p>
+              <br>
+              <p class="mb-0 font-weight-normal text-secondary text-sm">
+                {{mail.content}}
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+	
+{% endblock %}

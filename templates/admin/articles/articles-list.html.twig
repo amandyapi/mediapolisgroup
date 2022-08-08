@@ -1,0 +1,75 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}News
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-12">
+			<div class="card my-4">
+				<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+					<div class="bg-gradient-faded-info-vertical border-radius-lg pt-4 pb-3">
+						<h6 class="text-white text-capitalize ps-3">Articles</h6>
+						<p class="text-white ps-3">Liste des articles</p>
+					</div>
+				</div>
+				<div class="card-body px-0 pb-2">
+					<a style="margin-left: 20px" href="{{ path('admin_articles_add') }}" class="btn btn-sm bg-secondary ps-3 text-light">Ajouter</a>
+					<div class="table-responsive p-0">
+						<table class="table align-items-center mb-0">
+							<thead>
+								<tr>
+									<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Titre</th>
+									<th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Langue</th>
+									<th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Date de création</th>
+									
+									<th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+							{% for article in articles %}
+								<tr>
+									<td>
+										<div class="d-flex px-2 py-1">
+											<div class="d-flex flex-column justify-content-center">
+												<h6 class="mb-0 text-sm">{{article.title}}</h6>
+											</div>
+										</div>
+									</td>
+
+									<td>
+										<p class="text-sm text-center text-secondary mb-0">{{article.lang|capitalize}}</p>
+									</td>
+									
+									<td class="align-middle text-center">
+										<span class="text-secondary text-sm font-weight-bold">
+                                            {{article.createTime|date("d-m-Y")}}
+                                        </span>
+									</td>
+									
+									<td class="align-middle">
+										<a href="{{ path('admin_article_info', { 'id': article.id }) }}" class="btn btn-sm bg-secondary text-light">
+											<img src="{{ asset('assets-admin/img/icons/glyph/information.png') }}"/>
+										</a>
+                                        <a href="{{ path('admin_article_edit', { 'id': article.id }) }}" class="btn btn-sm bg-warning text-light">
+											<img src="{{ asset('assets-admin/img/icons/glyph/edit.png') }}"/>
+										</a>
+                                        <a 
+											href="{{ path('admin_article_delete', { 'id': article.id }) }}" 
+											class="btn btn-sm bg-danger text-light"
+											onclick="confirm('Voulez-vous vraiment supprimer cet article?')">
+											<img src="{{ asset('assets-admin/img/icons/glyph/trash.png') }}"/>
+										</a>
+									</td>
+								</tr>
+								{% endfor %}
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
