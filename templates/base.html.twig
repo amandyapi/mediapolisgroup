@@ -10,7 +10,7 @@
 		<meta name="description" content="megakit,business,company,agency,multipurpose,modern,bootstrap4">
 
 		<!-- bootstrap.min css -->
-		<link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css">
 		<!-- Icon Font Css -->
 		<link rel="stylesheet" href="{{ asset('assets/plugins/themify/css/themify-icons.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome/css/all.css') }}">
@@ -91,24 +91,21 @@
 								<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nos offres</a>
 								<ul class="dropdown-menu" aria-labelledby="dropdown03">
 									<li>
-										<a class="dropdown-item" href="#">Offres Stratégiques</a>
+										<a class="dropdown-item" href="{{ path('mediapolis_offres_strategique') }}">Offres Stratégiques</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">Offres Technologies</a>
+										<a class="dropdown-item" href="{{ path('mediapolis_offre_technologiques') }}">Offres Technologies</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">Offres Opérationnelles</a>
+										<a class="dropdown-item" href="{{ path('mediapolis_offres_operationnelles') }}">Offres Opérationnelles</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">Offres Music event</a>
+										<a class="dropdown-item" href="{{ path('mediapolis_offres_music_event') }}">Offres Music event</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Galerie</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Blog</a>
+								<a class="nav-link" href="#">News</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="{{ path('mediapolis_contact') }}">Nous contacter</a>
@@ -232,22 +229,19 @@
 				</div>
 			</footer>
 		</div>
-		<script src="{{ asset('assets/plugins/jquery/jquery.js') }}"></script>
-		<script src="{{ asset('assets/js/contact.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		
 		<!-- Bootstrap 4.3.1 -->
-		<script src="{{ asset('assets/plugins/bootstrap/js/popper.js') }}"></script>
-		<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js" integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!--  Magnific Popup-->
-		<script src="{{ asset('assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- Slick Slider -->
-		<script src="{{ asset('assets/plugins/slick-carousel/slick/slick.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- Counterup -->
-		<script src="{{ asset('assets/plugins/counterup/jquery.waypoints.min.js') }}"></script>
-		<script src="{{ asset('assets/plugins/counterup/jquery.counterup.min.js') }}"></script>
-
-		<!-- Google Map -->
-		<script src="{{ asset('assets/plugins/google-map/map.js') }}"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		{% block map %}{% endblock %}
 
 		<script src="{{ asset('assets/js/script.js') }}"></script>
 	</body>

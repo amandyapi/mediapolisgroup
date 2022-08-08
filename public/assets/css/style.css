@@ -504,8 +504,62 @@ ul.dropdown-menu li {
 }
 
 .bg-2 {
+  background: url("../images/bg/home-2.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 500px !important;
+}
+
+
+.bg-3 {
   background: url("../images/bg/home-5.jpg");
   background-size: cover;
+}
+
+.bg-4 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+
+.bg-5 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+
+.bg-6 {
+  background: url("../images/bg/home-5.jpg");
+  background-size: cover;
+}
+
+.bg-18 {
+  background: url("../images/bg/home-18.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
+}
+
+.bg-19 {
+  background: url("../images/bg/home-19.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
+}
+
+.bg-22 {
+  background: url("../images/bg/home-22.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
+}
+
+.bg-24 {
+  background: url("../images/bg/home-24.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
+}
+
+.bg-25 {
+  background: url("../images/bg/home-25.jpg") fixed no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 700px !important;
 }
 
 .slider {
@@ -762,6 +816,18 @@ ul.dropdown-menu li {
   background: url("../images/bg/home-17.jpg") fixed 50% 50%;
   background-size: cover;
   padding: 120px 0px;
+}
+
+.cta20 {
+  background: url("../images/bg/home-20.jpg") fixed 50% 50%;
+  background-size: cover;
+  padding: 120px 0px;
+}
+
+.cta25 {
+  background: url("../images/bg/home-25.jpg") fixed 50% 50%;
+  background-size: cover;
+  padding: 300px 0px;
 }
 
 .cta-block {
@@ -1493,4 +1559,4 @@ h3.quote::before {
   }
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+/* sourceMappingURL=maps/style.css.map */
