@@ -52,7 +52,7 @@ class AdminController extends AbstractController
                       ->getRepository(Mail::class)
                       ->findMails();
 
-        $template = 'mail/mails.html.twig';            
+        $template = 'admin/mail/mails.html.twig';            
         return $this->render($template, [
             'mails' => $mails,
             'user' => $user,
@@ -82,7 +82,7 @@ class AdminController extends AbstractController
         //var_dump($mail);die();
         $bgUrl = 'https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80';
 
-        $template = 'mail/mail.html.twig';            
+        $template = 'admin/mail/mail.html.twig';            
         return $this->render($template, [
             'mail' => $mail,
             'user' => $user,
@@ -107,7 +107,7 @@ class AdminController extends AbstractController
 
         //var_dump($articles[0]);die();
 
-        $template = 'articles/articles-list.html.twig';            
+        $template = 'admin/articles/articles-list.html.twig';            
         return $this->render($template, [
             'articles' => $articles,
             'user' => $user
@@ -132,7 +132,7 @@ class AdminController extends AbstractController
         $serverName = $_SERVER['SERVER_NAME'];
         $bgUrl = "http://".$serverName."/assets/uploads/articles/".$article["picture"];
 
-        $template = 'articles/article.html.twig';            
+        $template = 'admin/articles/article.html.twig';            
         return $this->render($template, [
             'article' => $article,
             'user' => $user,
@@ -186,7 +186,7 @@ class AdminController extends AbstractController
             }
         }
 
-        $template = 'articles/article-edit.html.twig';            
+        $template = 'admin/articles/article-edit.html.twig';            
         return $this->render($template, [
             'article' => $article,
             'user' => $user,
@@ -247,7 +247,7 @@ class AdminController extends AbstractController
             }
         }
 
-        $template = 'articles/article-new.html.twig';            
+        $template = 'admin/articles/article-new.html.twig';            
         return $this->render($template, [
             'user' => $user,
             'bgUrl' => $bgUrl

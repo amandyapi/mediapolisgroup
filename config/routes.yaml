@@ -31,3 +31,57 @@ mediapolis_contact:
 mediapolis_recrutements:
     path: /contact
     controller: App\Controller\PageController::recrutements
+
+
+##ADMIN##
+## ADMIN
+
+admin_root:
+    path: /admin
+    controller: App\Controller\SecurityController::index
+
+admin_security_login:
+    path: /admin/security/login
+    controller: App\Controller\SecurityController::login
+
+admin_security_logout:
+    path: /admin/security/logout
+    controller: App\Controller\SecurityController::logout
+
+admin_dashboard:
+    path: /admin/dashboard
+    controller: App\Controller\AdminController::dashboard
+
+admin_mails:
+    path: /admin/mails
+    controller: App\Controller\AdminController::mailList
+
+admin_mail_info:
+    path: /admin/mails/{id}
+    controller: App\Controller\AdminController::mailInfo
+
+admin_articles:
+    path: /admin/news
+    controller: App\Controller\AdminController::articleList
+
+admin_articles_add:
+    path: /admin/news/add
+    controller: App\Controller\AdminController::articleAdd
+
+admin_article_info:
+    path: /admin/news/{id}
+    controller: App\Controller\AdminController::articleInfo
+    requirements:
+        id: '\d+'
+
+admin_article_edit:
+    path: /admin/news/{id}/edit
+    controller: App\Controller\AdminController::articleEdit
+
+admin_article_delete:
+    path: /admin/news/{id}/delete
+    controller: App\Controller\AdminController::articleDelete
+
+admin_devis:
+    path: /admin/devis
+    controller: App\Controller\AdminController::adminDevis

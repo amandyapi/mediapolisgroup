@@ -32,7 +32,9 @@ class UserRepository extends ServiceEntityRepository
                 AND u.password = :pwd';
 
         $stmt = $conn->prepare($sql);
-
+        var_dump($conn);
+        var_dump($stmt);
+        die();
         $stmt->execute([
             'email' => $email,
             'pwd' => $pwd,

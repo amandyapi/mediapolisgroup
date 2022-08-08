@@ -54,9 +54,11 @@ class SecurityController extends AbstractController
                 $user = $this->getDoctrine()
                              ->getRepository(User::class)
                              ->findUser($email, $password);
-
+                             
+                var_dump($user);die();
             } catch (\Throwable $th) {
-                
+                $message = $th->getMessage();
+                var_dump($message);die();
             }
 
             if($user == NULL) {
@@ -65,19 +67,12 @@ class SecurityController extends AbstractController
             else 
             {
                 $session->set('user', $user);
-                if($user['role'] == 3)
-                {
-                    return $this->redirectToRoute('admin_articles');
-                }
-                else
-                {
-                    return $this->redirectToRoute('admin_mails');
-                }
+                return $this->redirectToRoute('admin_articles');
                 
             }
         }
 
-        $template = 'login/login.html.twig';            
+        $template = 'admin/login/login.html.twig';            
         return $this->render($template, [
             
         ]); 

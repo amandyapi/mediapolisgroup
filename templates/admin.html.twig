@@ -35,7 +35,6 @@
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse w-auto max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        {% if user.role != 3 %}
         <li id="dash_lnk" class="nav-item">
           <a class="nav-link text-white " href="{{ path('admin_mails') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -44,7 +43,6 @@
             <span class="nav-link-text ms-1">Messagerie</span>
           </a>
         </li>
-        {% endif %}
 
         <li id="news_lnk" class="nav-item">
           <a class="nav-link text-white" href="{{ path('admin_articles') }}">
@@ -52,15 +50,6 @@
               <i class="material-icons opacity-10">table_view</i>
             </div>
             <span class="nav-link-text ms-1">Articles</span>
-          </a>
-        </li>
-
-        <li id="devis_lnk" class="nav-item">
-          <a class="nav-link text-white" href="{{ path('admin_devis_all') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">event_note</i>
-            </div>
-            <span class="nav-link-text ms-1">Devis</span>
           </a>
         </li>
         
