@@ -6,6 +6,7 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
 class User
@@ -28,7 +29,7 @@ class User
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(name="email", type="string", length=100)
      */
     private $email;
 
@@ -38,7 +39,7 @@ class User
     private $contact;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(name="password", type="text")
      */
     private $password;
 

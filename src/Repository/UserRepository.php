@@ -2,8 +2,9 @@
 
 namespace App\Repository;
 
+use Doctrine\DBAL\Connection;
 use App\Entity\User;
-use App\Entity\Picture;
+
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -16,15 +17,17 @@ use Doctrine\Persistence\ManagerRegistry;
 class UserRepository extends ServiceEntityRepository
 {
 
+    public $_doctrine;
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Picture::class);
+        parent::__construct($registry, User::class);
+        $this->_doctrine = $registry;
     }
 
     public function findUser($email, $pwd)
     {
         $result = null;
-        $conn = $this->getEntityManager()->getConnection();
+        $conn = $this->_doctrine->getConnection();
 
         $sql = 'SELECT *
                 FROM user u
@@ -32,9 +35,7 @@ class UserRepository extends ServiceEntityRepository
                 AND u.password = :pwd';
 
         $stmt = $conn->prepare($sql);
-        var_dump($conn);
-        var_dump($stmt);
-        die();
+        //var_dump($conn);
         $stmt->execute([
             'email' => $email,
             'pwd' => $pwd,

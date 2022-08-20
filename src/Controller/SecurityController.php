@@ -5,14 +5,13 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Article;
-use App\Entity\Picture;
 use App\Entity\Mail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-
+use Doctrine\DBAL\Connection;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PhpParser\Node\Stmt\TryCatch;
@@ -50,12 +49,11 @@ class SecurityController extends AbstractController
                 $email = (string) $request->request->get('email');
                 $password = (string) $request->request->get('password');
                 $password = sha1($password);
-
+                
                 $user = $this->getDoctrine()
                              ->getRepository(User::class)
                              ->findUser($email, $password);
-                             
-                var_dump($user);die();
+                var_dump($user[0]);die();  
             } catch (\Throwable $th) {
                 $message = $th->getMessage();
                 var_dump($message);die();
