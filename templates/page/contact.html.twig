@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter{% endblock %}
+
+{% block wrapper %}
+<section class="page-title bg-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">Nous contacter</span>
+          <h1 class="text-capitalize mb-4 text-lg">Rester en contact</h1>
+          <ul class="list-inline">
+            <!-- <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact form start -->
+<section class="contact-form-wrap section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                 <form id="contact-form" class="contact__form" method="post" action="mail.php">
+                 <!-- form message -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                Votre message a été envoyé avec succès
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end message -->
+                    <span class="text-color">Envoyer un message</span>
+                    <h3 class="text-md mb-4">Formulaire de contact</h3>
+                    <div class="form-group">
+                        <input name="name" type="text" class="form-control" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <input name="email" type="email" class="form-control" placeholder="Votre adresse email">
+                    </div>
+                    <div class="form-group-2 mb-4">
+                        <textarea name="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
+                    </div>
+                    <button class="btn btn-main" name="submit" type="submit">Envoyer</button>
+                </form>
+            </div>
+
+            <div class="col-lg-5 col-sm-12">
+                <div class="contact-content pl-lg-5 mt-5 mt-lg-0">
+                    <span class="text-muted">Nous sommes des professionnels</span>
+                    <h2 class="mb-5 mt-2">N'hésitez surtout pas à nous contacter pour plus d'informations</h2>
+
+                    <ul class="address-block list-unstyled">
+                        <li>
+                            <i class="ti-direction mr-3"></i>Cocody, II Plateaux Mobile, Rue K57 en face de l'Epp II plateaux NORD, Abidjan, Côte d'Ivoire
+                        </li>
+                        <li>
+                            <i class="ti-email mr-3"></i>Email: info@mediapolisgroup.com
+                        </li>
+                        <li>
+                            <i class="ti-mobile mr-3"></i>Contact: +225 010 222 2787
+                        </li>
+                    </ul>
+
+                    <ul class="social-icons list-inline mt-5">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/mediapolisciv"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="google-map">
+    <div id="map"></div>
+</div>
+<section class="section cta12">
+	<div class="container">
+		<div class="row justify-content-end">
+			 
+			<div class="col-lg-5">
+				<div class="cta-item  bg-white p-5 rounded">
+					<span class="h6 text-color">Nous sommes à votre disposition</span>
+					<h2 class="mt-2 mb-4">Contactez nous!</h2>
+					<p class="lead mb-4">Nous sommes à votre disposition pour vous fournir toutes les informations nécessaires sur nos services. N'hésitez surtout pas à nous contacter</p>
+					<h3><i class="ti-mobile mr-3 text-color"></i>+225 010 222 2787</h3>
+                    <h3><i class="ti-email mr-3 text-color"></i>info@mediapolisgroup.com</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block map %}<!-- Google Map -->
+<script src="{{ asset('assets/plugins/google-map/map.js') }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+{% endblock %}

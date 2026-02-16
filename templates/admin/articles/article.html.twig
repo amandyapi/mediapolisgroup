@@ -1,0 +1,37 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Article Info
+{% endblock %}
+
+{% block content %}
+	<div class="page-header min-height-500 border-radius-xl mt-4" style="background-image: url({{bgUrl}});">
+		<span class=""></span>
+	</div>
+	<div class="card card-body mx-3 mx-md-4 mt-n3">
+		<div class="row gx-4 mb-2">
+			<div class="col-auto my-auto">
+				<div class="h-100">
+					<h5 class="mb-1">
+						{{article.title}}
+					</h5>
+					<p class="mb-0 font-weight-normal">
+						<a href="{{ path('admin_article_edit', { 'id': article.id }) }}" class="btn btn-sm bg-warning text-light">Editer</a>
+					</p>
+					<p class="mb-0 font-weight-bold text-sm">
+						{{article.user|capitalize}}
+						-
+						{{article.createTime|date("d-m-Y")}}
+					</p>
+					<br>
+					<p class="mb-0 font-weight-normal text-secondary text-sm">
+						{{article.content|raw}}
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

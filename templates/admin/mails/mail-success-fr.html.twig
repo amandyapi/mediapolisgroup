@@ -1,0 +1,45 @@
+{% extends 'layout-fr.html.twig' %}
+
+{% block title %}Présentation
+{% endblock %}
+
+{% block content %}
+<section class="page-title page-title-layout1 bg-overlay bg-parallax">
+    <div class="bg-img"><img src="{{ asset('assets/images/page-titles/1.jpg') }}" alt="background"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
+          {# <h1 class="pagetitle__heading">GFI-CO SARL</h1> #}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-layout2">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="heading-layout2 mb-20">
+            <h3 class="heading__title">
+              Félicitations !!!
+            </h3>
+          </div>
+          <p class="heading__desc mb-30" style="font-size: 13pt">
+            Votre message a bien été envoyé. Nos équipes vous répondront dans les plus bref délais
+          </p>
+          
+          <p class="heading__desc" style="font-size: 13pt">
+            Revenir à la page <a href="{{ path('gfi-home', { 'lang': 'fr' }) }}">d'accueil</a>
+          </p>
+          
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="about__img">
+            <img src="{{ asset('assets/images/about/3.jpg') }}" alt="about" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
